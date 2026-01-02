@@ -26,7 +26,11 @@ export default function useWeather() {
     }
   })
 
+  const [loading, setLoading] = useState(false)
+
   const fetchWeather = async (search: SearchType) => {
+
+    setLoading(true)
     
     try {
 
@@ -48,6 +52,8 @@ export default function useWeather() {
 
     } catch (error) {
       console.log(error)
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -55,6 +61,7 @@ export default function useWeather() {
 
   return {
     weather,
+    loading,
     fetchWeather,
     hasWeatherData
   }
