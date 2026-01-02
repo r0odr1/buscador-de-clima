@@ -4,6 +4,15 @@
   gap: 2rem;
 }
 
+.form input[type="text"] {
+  padding: 1rem;
+  background-color: transparent;
+  border: .3rem solid var(--white);
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 400;
+  border-radius: 1rem;
+}
 .form input[type="text"],
 .form select {
   padding: 1rem;
@@ -16,6 +25,10 @@
 }
 .field ::placeholder {
   color: var(--white);
+}
+
+.form select option {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .submit {
