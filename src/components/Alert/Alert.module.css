@@ -1,0 +1,11 @@
+.alert {
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.8rem;
+  background-color: #FEF3C7;
+  color: #92400E;
+  /* border-left: 4px solid #F59E0B; */
+  border-radius: 1rem;
+}
