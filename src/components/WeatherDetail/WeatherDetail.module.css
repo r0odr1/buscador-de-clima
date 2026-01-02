@@ -1,15 +1,19 @@
 .container {
-  background-color: transparent;
-  border-radius: 1rem;
-  border: 5px solid var(--white);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   text-align: center;
-  padding: 1rem;
+  min-width: 350px;
 }
 
 .current {
-  font-size: 6rem;
-  font-weight: 900;
-  margin: 0;
+  font-size: 5rem;
+  font-weight: 300;
+  margin: 1rem 0;
+  min-width: 350px;
 }
 
 .temperatures {

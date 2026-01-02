@@ -13,24 +13,27 @@ const Weather = z.object({
   })
 })
 
-export type Weather = z.infer<typeof Weather>
-
-export default function useWeather() {
-
-  const [weather, setWeather] = useState<Weather>({
-    name: '',
+const initialState = {
+  name: '',
     main: {
       temp: 0,
       temp_max: 0,
       temp_min: 0
     }
-  })
+}
+
+export type Weather = z.infer<typeof Weather>
+
+export default function useWeather() {
+
+  const [weather, setWeather] = useState<Weather>(initialState)
 
   const [loading, setLoading] = useState(false)
 
   const fetchWeather = async (search: SearchType) => {
 
     setLoading(true)
+    setWeather(initialState)
     
     try {
 
