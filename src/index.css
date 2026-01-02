@@ -1,9 +1,16 @@
 :root {
   --white: #FFF;
   --primary: #F59E0B;
+  --dark-bg: rgba(0, 0, 0, 0.4);
 }
 
-HTML {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
   font-size: 62.5%;
 }
 
@@ -11,8 +18,52 @@ body {
   font-family: "Outfit", sans-serif;
   background-image: url('/bg_clima.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
+  background-position: center;
+  background-attachment: fixed;
+  animation: gradientBG 18s ease infinite;
+  min-height: 100vh;
   color: var(--white);
   font-size: 2rem;
+  position: relative;
+}
+
+/* Overlay oscuro para que el texto sea legible */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Ajusta entre 0.4 y 0.6 */
+  z-index: -1;
+}
+
+/* Animación suave para aparición de contenido */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out !important;
+  animation-delay: 0.1s;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 768px) {
+  .animate-fadeIn {
+    animation-duration: 2s;
+  }
 }

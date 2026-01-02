@@ -6,9 +6,10 @@ import Alert from "../Alert/Alert";
 
 type FormProps = {
   fetchWeather: (search: SearchType) => Promise<void>
+  loading: boolean
 }
 
-export default function Form({fetchWeather} : FormProps) {
+export default function Form({fetchWeather, loading} : FormProps) {
   const [search, setSearch] = useState<SearchType>({
     city: '',
     country: ''
@@ -73,7 +74,7 @@ export default function Form({fetchWeather} : FormProps) {
         </select>
       </div>
 
-      <input className={styles.submit} type="submit" value='Consultar Clima' />
+      <input className={styles.submit} type="submit" value='Consultar Clima' disabled={loading} />
     </form>
   )
 }

@@ -1,11 +1,29 @@
+/* Alert.module.css */
 .alert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
   font-weight: 900;
   font-size: 1.8rem;
-  background-color: #FEF3C7;
-  color: #92400E;
-  /* border-left: 4px solid #F59E0B; */
-  border-radius: 1rem;
+  text-transform: uppercase;
+  margin: auto 0;
+  width: 100%;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Alerta de error (ciudad no encontrada) */
+.alert:has(.error) {
+  background: rgba(239, 68, 68, 0.2);
+  color: #FECACA;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* Alerta de validación (campos vacíos) */
+.alert:not(:has(.error)) {
+  background: rgba(245, 158, 11, 0.2);
+  color: #FEF3C7;
+  border: 1px solid rgba(245, 158, 11, 0.3);
 }

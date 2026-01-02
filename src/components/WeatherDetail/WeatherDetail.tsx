@@ -7,8 +7,9 @@ type WeatherDetailProps = {
 }
 
 export default function WeatherDetail({weather} : WeatherDetailProps) {
+  
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} animate-fadeIn`}>
       <h2>Clima de: {weather.name}</h2>
       <p className={styles.current}>{ formatTemperature(weather.main.temp) }&deg;C</p>
       <div className={styles.temperatures}>
