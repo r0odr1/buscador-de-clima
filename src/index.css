@@ -17,7 +17,7 @@ html {
 body {
   font-family: "Outfit", sans-serif;
   background-color: #0f2027;
-  background-image: url('/bg-clima.jpg'), url('/bg_clima.webp'), url('/bg_clima.jpg');
+  background-image: url('https://images.unsplash.com/photo-1498496294664-d9372eb521f3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -58,11 +58,11 @@ body::before {
   animation-delay: 0.1s;
 }
 
-@keyframes gradientBG {
+/* @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
+} */
 
 @media (max-width: 768px) {
   .animate-fadeIn {
